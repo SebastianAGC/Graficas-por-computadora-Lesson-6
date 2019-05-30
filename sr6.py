@@ -115,7 +115,7 @@ def glLine(x0, y0, x1, y1):
 
 
 def glFinish():
-    screen.write('out.bmp')
+    screen.write('high.bmp')
 
 
 
@@ -123,9 +123,9 @@ def transform(v1):
     vertex = vec3(*v1)
     vertex = vec4(vertex, 1)
     i = mat4(1)
-    translateM = translate(i, vec3(0, -500, 0))
-    rotationM = rotate(i, 0, (0,0,1))
-    scaleM = scale(i, (800, 800, 800))
+    translateM = translate(i, vec3(0, -1300, -200))
+    rotationM = rotate(i, 0.29, (1,0,0))
+    scaleM = scale(i, (1400, 1400, 1400))
     modelM = translateM * rotationM * scaleM
     viewM = lookAt(vec3(0,0,200), vec3(0,0,0), vec3(0,1,0))
 
